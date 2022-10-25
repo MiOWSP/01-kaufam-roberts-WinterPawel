@@ -33,8 +33,8 @@ def calc_bn(V, P, t, i=1):
 
 M = 2 # strumienie ruchu
 V = 3 # pojemnosc jednostki w kanalach
-t = [[1, 2], [3, 4]] # liczba zadawanych jednostek przetwarzania
-a = [[0.4, 1], [1, 2]]# ruch oferowany
+t = [[1, 2]] # liczba zadawanych jednostek przetwarzania
+a = [[0.4, 1], [0.4, 2], [0.4, 3]]# ruch oferowany
 
 print(f'M={M}\nV={V}\n')
 
@@ -50,8 +50,6 @@ for aI in a:
       b[i] = calc_bn(V, P, tI, i + 1)
       i += 1
     
-    print(f"x = {x}")
-    print(f"P = {P}")
-
-    for i in range(M):
-      print(f"b[{i+1}] = {b[i]}")
+    print(f"x: {x}")
+    print(f"P: {P}")
+    print(f"b: {b}")
